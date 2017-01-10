@@ -1,18 +1,17 @@
 'use strict'
-function reverseString(str){
-	if(str === ""){
-		return null;
+function findMissing(x, y){
+	if(x === [] || y ===[]){
+		return 0;
 	}
-	var reversal = "";
-	for (var i = 1; i<=str.length; i++){
-		reversal+=(str[str.length-i])
-		}
-		if (reversal === str){
-			return true
-		}
-		return reversal
+	if(x.length === y.length){
+		return 0
+	}
+	return y[(y.length)-1]
+	
+  
+		
 }
 
 module.exports = {
-	reverseString : reverseString
+	findMissing : findMissing
 };
